@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="cs">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+    <title>{{ title }}</title>
+
+    <meta property="og:locale" content="cs_CZ"/>
+    <meta property="og:site_name" content="Puklina"/>
+    <link rel="canonical" href="{{ site.url }}{{ page.url | url }}">
+    <meta name="robots" content="index, follow">
+    <link rel="stylesheet" href="/css/styles.css"/>
+  </head>
+  <body>
+    {% include 'header.njk' %}
+    <main>
+      {{ content | safe }}
+    </main>
+    {% include 'footer.njk' %}
+    <script>
+      if (window.netlifyIdentity) {
+        window
+          .netlifyIdentity
+          .on("init", (user) => {
+            if (!user) {
+              window
+                .netlifyIdentity
+                .on("login", () => {
+                  document.location.href = "/admin/";
+                });
+            }
+          });
+      }
+    </script>
+    <script src="/script.js"></script>
+  </body>
+</html>
