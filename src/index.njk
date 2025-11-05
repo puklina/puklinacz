@@ -17,11 +17,15 @@ title: "Puklina – Stavební a rekonstrukční práce"
 
   {# --- PROJECTS --- #}
   <section class="wrapper section--hug projects" id="projekty">
-    <h2>Naše práce</h2>
-    <div class="scroll-x">
-      {% for project in collections.projects %}
-        {% include "card.njk" %}
-      {% endfor %}
+    <h2>Realizované zakázky</h2>
+    <div class="carousel-wrapper">
+      <button class="arrow left" aria-label="Předchozí">&#10094;</button>
+      <div class="carousel">
+        {% for project in collections.projects %}
+          {% include "card.njk" %}
+        {% endfor %}
+      </div>
+      <button class="arrow right" aria-label="Další">&#10095;</button>
     </div>
     <div class="center mt-4">
       <a href="https://instagram.com/puklina" target="_blank" class="button">

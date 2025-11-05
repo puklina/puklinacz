@@ -1,8 +1,9 @@
-<article class="card">
+<article class="card" style="scroll-snap-align: start;">
   <img
     src="{{ project.data.image }}"
-    alt="{{ project.data.title }}"
+    alt="{{ project.data.title | escape }}"
     loading="lazy"
+    decoding="async"
 />
   <div class="card-body">
     <h3>{{ project.data.title }}</h3>
