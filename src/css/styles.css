@@ -261,6 +261,15 @@ a:hover {
 .hero li + li {
 	margin-top: 0.25rem;
 }
+.hero-logo {
+	display: flex;
+	justify-content: center;
+	margin-bottom: 2rem;
+}
+.hero-logo img {
+	max-width: 240px;
+	height: auto;
+}
 
 /* ==== LOGOS ==== */
 
