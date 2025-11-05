@@ -1,3 +1,11 @@
+/* IBM Plex Sans Condensed (headings) */
+@font-face {
+	font-family: 'IBM Plex Sans Condensed';
+	src: url('/assets/fonts/IBMPlexSansCond-Bold.woff2') format('woff2');
+	font-weight: 700;
+	font-style: normal;
+	font-display: swap;
+}
 :root {
 	--color-bg: #000000;
 	--color-text: #ffffff;
@@ -17,6 +25,8 @@
 
 	--space: clamp(1rem, 2vw, 2rem);
 	--max-width: 70ch;
+	--font-body: system-ui, sans-serif;
+	--font-heading: 'IBM Plex Sans Condensed', sans-serif;
 }
 
 /* CSS RESET */
@@ -60,6 +70,13 @@ textarea,
 select {
 	font: inherit;
 }
+button,
+input[type='button'],
+input[type='submit'] {
+	cursor: pointer;
+	border: none;
+	background: none;
+}
 p,
 h1,
 h2,
@@ -81,7 +98,7 @@ p {
 
 /*! Typebase.less v0.1.0 | MIT License */
 html {
-	font-family: sans-serif;
+	font-family: var(--font-body);
 	font-size: 137.5%;
 	-webkit-font-smoothing: antialiased;
 }
@@ -117,7 +134,7 @@ h3,
 h4,
 h5,
 h6 {
-	font-family: sans-serif;
+	font-family: var(--font-heading);
 	margin-top: 1.5rem;
 	margin-bottom: 0;
 	line-height: 1.5rem;
@@ -220,7 +237,6 @@ a:hover {
 	background: var(--color-primary);
 	color: #fff;
 	padding: 0.75rem 1.5rem;
-	border: 0;
 	border-radius: 4px;
 	text-decoration: none;
 	transition: background 0.2s ease;
