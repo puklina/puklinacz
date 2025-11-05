@@ -1,0 +1,25 @@
+<section class="wrapper section--hug contact" id="kontakt">
+  <h2>Kontaktujte nás</h2>
+  <p>
+    Popište svůj projekt nebo si vyžádejte nezávaznou nabídku. Ozveme se vám co
+    nejdříve.
+  </p>
+
+  <form name="contact" method="POST" data-netlify="true" class="contact-form">
+    <input type="hidden" name="form-name" value="contact">
+
+    <label for="jmeno">Jméno</label>
+    <input id="jmeno" name="jmeno" type="text" required>
+
+    <label for="email">E-mail</label>
+    <input id="email" name="email" type="email" required>
+
+    <label for="telefon">Telefon</label>
+    <input id="telefon" name="telefon" type="text">
+
+    <label for="zprava">Zpráva</label>
+    <textarea id="zprava" name="zprava" rows="5" required></textarea>
+
+    <button type="submit" class="button">Odeslat</button>
+  </form>
+</section>

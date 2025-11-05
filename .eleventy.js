@@ -60,6 +60,10 @@ module.exports = function (eleventyConfig) {
 	eleventyConfig.addLiquidShortcode('image', imageShortcode);
 	eleventyConfig.addJavaScriptFunction('image', imageShortcode);
 
+	eleventyConfig.addCollection('projects', (collection) =>
+		collection.getFilteredByGlob('src/projects/*.md')
+	);
+
 	return {
 		dir: {
 			input: 'src',

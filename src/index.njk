@@ -1,5 +1,40 @@
 ---
-layout: "base.njk"
+layout: base.njk
+title: "Puklina – Stavební a rekonstrukční práce"
 ---
 
-Hello world 2
+{% include "header.njk" %}
+
+<main>
+
+  {# --- HERO SECTION --- #}
+  {% include "hero.njk" %}
+
+  {# --- CLIENT LOGOS --- #}
+  <section class="wrapper section--hug logos">
+    {% include "logos.njk" %}
+  </section>
+
+  {# --- PROJECTS --- #}
+  <section class="wrapper section--hug projects" id="projekty">
+    <h2>Naše práce</h2>
+    <div class="scroll-x">
+      {% for project in collections.projects %}
+        {% include "card.njk" %}
+      {% endfor %}
+    </div>
+    <div class="center mt-4">
+      <a href="https://instagram.com/puklina" target="_blank" class="button">
+        Více projektů na Instagramu
+      </a>
+    </div>
+  </section>
+
+  {# --- CONTACT --- #}
+  <section class="wrapper section--hug contact" id="kontakt">
+    {% include "contact.njk" %}
+  </section>
+
+</main>
+
+{% include "footer.njk" %}
