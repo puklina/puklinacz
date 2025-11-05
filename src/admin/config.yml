@@ -15,4 +15,26 @@ collections:
       - { label: 'Název projektu', name: 'title', widget: 'string' }
       - { label: 'Popis', name: 'description', widget: 'text' }
       - { label: 'Obrázek', name: 'image', widget: 'image' }
-      - { label: 'Dokončeno', name: 'completed', widget: 'string' }
+      - {
+          label: 'Začátek realizace',
+          name: 'start_date',
+          widget: 'datetime',
+          format: 'MM/YYYY',
+          date_format: 'MM/YYYY',
+          time_format: false,
+        }
+      - {
+          label: 'Konec realizace',
+          name: 'end_date',
+          widget: 'datetime',
+          format: 'MM/YYYY',
+          date_format: 'MM/YYYY',
+          time_format: false,
+        }
+      - {
+          label: 'Pořadí (volitelné)',
+          name: 'order',
+          widget: 'number',
+          required: false,
+          hint: 'Menší číslo = vyšší pozice',
+        }

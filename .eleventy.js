@@ -39,13 +39,9 @@ module.exports = function (eleventyConfig) {
 
 	eleventyConfig.addShortcode('year', () => `${new Date().getFullYear()}`);
 
-	eleventyConfig.addFilter('postDate', (dateObj) => {
-		return DateTime.fromJSDate(dateObj).toLocaleString(DateTime.DATE_MED);
-	});
-
-	// Add a filter to format dates for structured data
-	eleventyConfig.addFilter('isoDate', function (date) {
-		return date.toISOString();
+	eleventyConfig.addFilter('date', (dateObj, format = 'MM/yyyy') => {
+		if (!dateObj) return '';
+		return DateTime.fromJSDate(new Date(dateObj)).toFormat(format);
 	});
 
 	eleventyConfig.addFilter(
