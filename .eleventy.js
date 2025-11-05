@@ -37,9 +37,7 @@ module.exports = function (eleventyConfig) {
 	eleventyConfig.addPassthroughCopy('src/_redirects');
 	eleventyConfig.addPassthroughCopy('src/script.js');
 
-	eleventyConfig.addShortcode('year', () => `${new Date().getFullYear()}`);
-
-	eleventyConfig.addFilter('date', (dateObj, format = 'MM/yyyy') => {
+	eleventyConfig.addFilter('monthYear', (dateObj, format = 'MM/yyyy') => {
 		if (!dateObj) return '';
 		return DateTime.fromJSDate(new Date(dateObj)).toFormat(format);
 	});
