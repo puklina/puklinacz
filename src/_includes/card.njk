@@ -6,13 +6,13 @@
     decoding="async"
 />
   <div class="card-body">
-    <h3>{{ project.data.title }}</h3>
+    <h3 class="h6">{{ project.data.title }}</h3>
     <p>{{ project.data.description }}</p>
     {% if project.data.start_date and project.data.end_date %}
       <p class="realizace">
         Realizace:
         <strong>
-          {{ project.data.start_date | monthYear }} – {{ project.data.end_date | monthYear }}
+          {{ project.data.start_date | monthYear }} - {{ project.data.end_date | monthYear }}
         </strong>
       </p>
     {% endif %}
