@@ -4,7 +4,6 @@ backend:
 
 media_folder: 'src/assets/projects'
 public_folder: '/assets/projects'
-
 collections:
   - name: 'projects'
     label: 'Projekty'
@@ -19,16 +18,14 @@ collections:
           label: 'Začátek realizace',
           name: 'start_date',
           widget: 'datetime',
-          format: 'MM/YYYY',
-          date_format: 'MM/YYYY',
+          date_format: 'YYYY-MM-DD',
           time_format: false,
         }
       - {
           label: 'Konec realizace',
           name: 'end_date',
           widget: 'datetime',
-          format: 'MM/YYYY',
-          date_format: 'MM/YYYY',
+          date_format: 'YYYY-MM-DD',
           time_format: false,
         }
       - {
