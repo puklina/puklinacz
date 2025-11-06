@@ -1,25 +1,46 @@
-<section class="wrapper section--hug contact" id="kontakt">
-  <h2>Kontaktujte nás</h2>
-  <p>
-    Popište svůj projekt nebo si vyžádejte nezávaznou nabídku. Ozveme se vám co
-    nejdříve.
+<section class="section--hug contact" id="kontakt">
+  <h2 class="text-center">Kontaktujte <span class="clr-primary">nás</span></h2>
+  <p class="text-center">
+    Máte zájem o naše služby? Napište nám nebo nám zavolejte.
   </p>
+  <div class="grid-2 mt-5">
+    <div>
+      <h3 class="clr-primary h4">Kontaktní údaje</h3>
+      <p>
+        <strong>Email</strong><br>
+        <a class="link-unstyled" href="mailto:jiri.gresak@puklina.com">
+          <span class="faded" style="font-size:16px;">jiri.gresak@puklina.com</span></a>
+      </p>
 
-  <form name="contact" method="POST" data-netlify="true" class="contact-form">
-    <input type="hidden" name="form-name" value="contact">
+      <p>
+        <strong>Telefon</strong><br>
+        <a class="link-unstyled" href="tel:+420725468422">
+          <span class="faded" style="font-size:16px;">+420 725 468 422</span></a>
+      </p>
 
-    <label for="jmeno">Jméno</label>
-    <input id="jmeno" name="jmeno" type="text" required>
+      <p>
+        <strong>Adresa</strong><br>
+        <span class="faded" style="font-size:16px;">
+        Koželužská 945/31<br>
+        779 00 Olomouc
+      </span></p>
+    </div>
+    <form name="contact" method="POST" data-netlify="true" class="contact-form">
+      <input type="hidden" name="form-name" value="contact">
 
-    <label for="email">E-mail</label>
-    <input id="email" name="email" type="email" required>
+      <label class="visually-hidden" for="jmeno">Jméno</label>
+      <input id="jmeno" name="jmeno" type="text" placeholder="Jméno" required>
 
-    <label for="telefon">Telefon</label>
-    <input id="telefon" name="telefon" type="text">
+      <label class="visually-hidden" for="email">E-mail</label>
+      <input id="email" name="email" type="email" placeholder="E-mail" required>
 
-    <label for="zprava">Zpráva</label>
-    <textarea id="zprava" name="zprava" rows="5" required></textarea>
+      <label class="visually-hidden" for="telefon">Telefon</label>
+      <input id="telefon" name="telefon" type="text" placeholder="Telefon">
 
-    <button type="submit" class="button">Odeslat</button>
-  </form>
+      <label class="visually-hidden" for="zprava">Zpráva</label>
+      <textarea id="zprava" name="zprava" rows="5" placeholder="Zpráva" required></textarea>
+
+      <button type="submit" class="button">Odeslat</button>
+    </form>
+  </div>
 </section>
