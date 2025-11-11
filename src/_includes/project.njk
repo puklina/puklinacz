@@ -1,0 +1,56 @@
+---
+layout: base.njk
+---
+<a href="/">{% include "header.njk" %}</a>
+
+<article class="project-detail">
+  <!-- HERO SECTION -->
+  <div
+    class="project-detail__hero"
+  >
+    <div class="wrapper--narrow">
+      <h1>{{ title }}</h1>
+    </div>
+  </div>
+
+  <!-- CONTENT SECTION -->
+  <div class="wrapper--narrow project-detail__body">
+    <p class="project-description lead">
+      <strong>{{ description }}</strong>
+    </p>
+
+    {% if start_date and end_date %}
+      <p class="realizace">
+        <strong>
+          Realizace:
+          {{ start_date | monthYear }} – {{ end_date | monthYear }}
+        </strong>
+      </p>
+    {% endif %}
+
+    <div class="project-content">
+      {{ content | safe }}
+    </div>
+  </div>
+
+  <!-- GALLERY SECTION -->
+  {% if gallery %}
+    <div class="gallery wrapper--wide">
+      {% for img in gallery %}
+        <div class="gallery__item" data-full="{{ img }}">
+          <img class="mx-auto" src="{{ img }}" alt="{{ title }}">
+        </div>
+      {% endfor %}
+    </div>
+  {% endif %}
+
+  <div class="wrapper--narrow text-center mt-4">
+    <a href="/" class="btn btn--primary">← Zpět na hlavní stránku</a>
+  </div>
+</article>
+
+<!-- MODAL -->
+<div id="imageModal" class="image-modal">
+  <span class="image-modal__close">&times;</span>
+  <img class="image-modal__content" id="modalImage">
+</div>

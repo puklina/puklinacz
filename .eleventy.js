@@ -1,5 +1,6 @@
 const { DateTime } = require('luxon');
 const Image = require('@11ty/eleventy-img');
+const slugify = require('slugify');
 
 // responsive image shortcode
 async function imageShortcode(
@@ -42,6 +43,14 @@ module.exports = function (eleventyConfig) {
 	eleventyConfig.addFilter('monthYear', (dateObj) => {
 		if (!dateObj) return '';
 		return DateTime.fromJSDate(new Date(dateObj)).toFormat('MM/yyyy');
+	});
+
+	eleventyConfig.addFilter('slug', (value) => {
+		return slugify(value, {
+			lower: true,
+			strict: true,
+			locale: 'cs',
+		});
 	});
 
 	eleventyConfig.addFilter(
