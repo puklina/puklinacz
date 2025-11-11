@@ -195,6 +195,10 @@ code {
 .lead {
 	font-size: var(--fs-500);
 }
+.small-print {
+	font-size: var(--fs-300);
+	margin-top: 0.5rem;
+}
 .hug {
 	margin-top: 0;
 }
@@ -329,6 +333,11 @@ button,
 	font-weight: 700;
 	font-family: var(--font-heading);
 }
+.button-outline {
+	background: transparent;
+	border: 2px solid var(--color-primary);
+	color: var(--color-primary);
+}
 .button:hover {
 	background: var(--color-hover);
 	color: #fff;
@@ -354,7 +363,7 @@ button,
 .hero {
 	position: relative;
 	overflow: hidden;
-	min-height: 100vh;
+	min-height: 950px;
 	display: flex;
 	align-items: center; /* vertical centering */
 	justify-content: center; /* optional horizontal centering */
@@ -370,7 +379,6 @@ button,
 	filter: grayscale(100%);
 	opacity: 0.9;
 }
-
 /* gradient overlay: darker at the bottom, lighter at the top */
 .hero::before {
 	content: '';
@@ -390,7 +398,6 @@ button,
 	position: relative;
 	z-index: 1;
 	width: 100%;
-	padding-block: 1.75rem;
 }
 .hero ul {
 	list-style: none;
@@ -562,16 +569,38 @@ button,
 /* ==== HEADER & FOOTER ==== */
 
 .header {
+	padding-block: var(--space);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.header--absolute {
 	position: absolute;
 	top: 0;
 	left: 0;
 	right: 0;
 	z-index: 99;
-	padding-block: var(--space);
+}
+.header__inner {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	width: 100%;
 }
 .header .logo {
 	max-width: 150px;
-	margin-inline: auto;
+}
+.header__button {
+	border-radius: 50em;
+	font-size: 16px;
+}
+.header__button:hover {
+	transform: none;
+}
+@media screen and (max-width: 600px) {
+	.header__button {
+		display: none;
+	}
 }
 .footer {
 	background: #000;
@@ -592,8 +621,7 @@ button,
 /* Project page */
 
 .project {
-	padding-top: 100px;
-	padding-bottom: 6em;
+	padding-bottom: 3rem;
 }
 .project-overview {
 	position: relative;
@@ -618,7 +646,9 @@ button,
 .project-overview__content > * {
 	z-index: 9;
 }
-
+.project-content {
+	padding-block: 3em;
+}
 @media screen and (min-width: 768px) {
 	.project-overview__content {
 		flex-direction: row;
