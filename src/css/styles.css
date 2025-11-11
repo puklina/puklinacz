@@ -511,33 +511,43 @@ button,
 	aspect-ratio: 1 / 1;
 	object-fit: cover;
 }
+
 .arrow {
-	position: absolute;
-	top: 50%;
-	transform: translateY(-50%);
-	background: rgba(230, 24, 93, 0.06);
-	border: 1px solid rgba(255, 255, 255, 0.1);
-	backdrop-filter: blur(6px);
-	color: #fff;
-	border: none;
-	border-radius: 0.25rem;
-	padding: 0.5rem 1rem;
-	cursor: pointer;
-	z-index: 1;
-	transition: background 0.4s ease;
+	display: none;
 }
-.arrow:hover {
-	background: rgba(255, 255, 255, 0.12);
-}
-.arrow.left {
-	left: 0;
-}
-.arrow.right {
-	right: 0;
+@media screen and (min-width: 768px) {
+	.arrow {
+		display: unset;
+		position: absolute;
+		top: 50%;
+		transform: translateY(-50%);
+		background: rgba(230, 24, 93, 0.06);
+		border: 1px solid rgba(255, 255, 255, 0.1);
+		backdrop-filter: blur(6px);
+		color: #fff;
+		border: none;
+		border-radius: 0.25rem;
+		padding: 0.5rem 1rem;
+		cursor: pointer;
+		z-index: 1;
+		transition: background 0.4s ease;
+	}
+	.arrow:hover {
+		background: rgba(255, 255, 255, 0.12);
+	}
+	.arrow.left {
+		left: 0;
+	}
+	.arrow.right {
+		right: 0;
+	}
 }
 
 /* ==== CONTACT FORM ==== */
 
+section.contact {
+	padding-bottom: 3rem;
+}
 .contact-form {
 	display: flex;
 	flex-direction: column;
