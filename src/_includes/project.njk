@@ -3,36 +3,32 @@ layout: base.njk
 ---
 <a href="/">{% include "header.njk" %}</a>
 
-<article class="project-detail">
-  <!-- HERO SECTION -->
-  <div
-    class="project-detail__hero"
-  >
-    <div class="wrapper--narrow">
-      <h1>{{ title }}</h1>
+<article class="project">
+  <div class="project-overview" style="background-image: url('{{ image }}');">
+    <div class="project-overview__content wrapper--wide">
+      <div class="project-title">
+        <h1>{{ title }}</h1>
+      </div>
+      <div class="project-description">
+        <p class="lead">
+          <strong>{{ description }}</strong>
+        </p>
+        {% if start_date and end_date %}
+          <p class="realizace">
+            <strong>
+              Realizace:
+              {{ start_date | monthYear }} – {{ end_date | monthYear }}
+            </strong>
+          </p>
+        {% endif %}
+      </div>
     </div>
   </div>
-
-  <!-- CONTENT SECTION -->
-  <div class="wrapper--narrow project-detail__body">
-    <p class="project-description lead">
-      <strong>{{ description }}</strong>
-    </p>
-
-    {% if start_date and end_date %}
-      <p class="realizace">
-        <strong>
-          Realizace:
-          {{ start_date | monthYear }} – {{ end_date | monthYear }}
-        </strong>
-      </p>
-    {% endif %}
-
+  <div class="wrapper--narrow">
     <div class="project-content">
       {{ content | safe }}
     </div>
   </div>
-
   <!-- GALLERY SECTION -->
   {% if gallery %}
     <div class="gallery wrapper--wide">
@@ -44,7 +40,7 @@ layout: base.njk
     </div>
   {% endif %}
 
-  <div class="wrapper--narrow text-center mt-4">
+  <div class="wrapper--narrow text-center mt-6">
     <a href="/" class="btn btn--primary">← Zpět na hlavní stránku</a>
   </div>
 </article>
@@ -54,3 +50,5 @@ layout: base.njk
   <span class="image-modal__close">&times;</span>
   <img class="image-modal__content" id="modalImage">
 </div>
+
+{% include "footer.njk" %}
