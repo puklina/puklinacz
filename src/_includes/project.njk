@@ -8,7 +8,11 @@ layout: base.njk
     <div class="project-overview__bg" style="background-image: url('{{ image }}');"></div>
     <div class="project-overview__content wrapper--wide">
       <div class="project-title">
-        <h1 class="hug">{{ title }}</h1>
+        {% set words = title.split(' ') %}
+        <h1 class="hug">
+          {{ words.slice(0, -1).join(' ') }}
+          <span class="clr-primary">{{ words[words.length - 1] }}</span>
+        </h1>
       </div>
       <div class="project-description">
         <p class="lead">
@@ -43,7 +47,7 @@ layout: base.njk
 
   <div class="wrapper--narrow text-center mt-6">
     <p>
-      <a href="/#kontakt" class="button button-outline header__button">Kontaktujte nás</a>
+      <a href="/#kontakt" class="button">Kontaktujte nás</a>
     </p>
     <p class="small-print mt-4">
       <a href="/" class="btn btn--primary link-unstyled faded">← Nebo zpět na hlavní stránku</a>

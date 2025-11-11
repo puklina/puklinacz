@@ -19,7 +19,7 @@ document.addEventListener('DOMContentLoaded', function () {
 	// Slow hero video playback if exists
 	const heroBg = document.querySelector('.hero-bg');
 	if (heroBg && heroBg.playbackRate !== undefined) {
-		heroBg.playbackRate = 0.3;
+		heroBg.playbackRate = 0.5;
 	}
 
 	// Gallery modal functionality
