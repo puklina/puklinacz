@@ -66,7 +66,7 @@ module.exports = function (eleventyConfig) {
 	eleventyConfig.addJavaScriptFunction('image', imageShortcode);
 
 	eleventyConfig.addCollection('projects', (collection) =>
-		collection.getFilteredByGlob('src/projects/*.md')
+		collection.getFilteredByGlob('src/realizovane-zakazky/*.md')
 	);
 
 	return {

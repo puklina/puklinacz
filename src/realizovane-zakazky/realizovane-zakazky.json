@@ -1,0 +1,4 @@
+{
+	"layout": "project.njk",
+	"permalink": "realizovane-zakazky/{{ title | slug }}/index.html"
+}

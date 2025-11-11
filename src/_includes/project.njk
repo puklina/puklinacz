@@ -4,10 +4,11 @@ layout: base.njk
 <a href="/">{% include "header.njk" %}</a>
 
 <article class="project">
-  <div class="project-overview" style="background-image: url('{{ image }}');">
+  <div class="project-overview">
+    <div class="project-overview__bg" style="background-image: url('{{ image }}');"></div>
     <div class="project-overview__content wrapper--wide">
       <div class="project-title">
-        <h1>{{ title }}</h1>
+        <h1 class="hug">{{ title }}</h1>
       </div>
       <div class="project-description">
         <p class="lead">

@@ -9,7 +9,6 @@ collections:
     label: 'Projekty'
     folder: 'src/projects'
     create: true
-    slug: '{{slug}}'
     fields:
       - { label: 'Název projektu', name: 'title', widget: 'string' }
       - { label: 'Popis', name: 'description', widget: 'text' }
@@ -34,4 +33,18 @@ collections:
           widget: 'number',
           required: false,
           hint: 'Menší číslo = vyšší pozice',
+        }
+      - {
+          label: 'Obsah stránky',
+          name: 'body',
+          widget: 'markdown',
+          hint: 'Hlavní obsah projektu',
+        }
+      - {
+          label: 'Galerie',
+          name: 'gallery',
+          widget: 'list',
+          summary: '{{fields.image}}',
+          field: { label: 'Obrázek', name: 'image', widget: 'image' },
+          hint: 'Přidejte více fotografií k projektu',
         }
