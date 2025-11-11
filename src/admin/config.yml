@@ -2,12 +2,12 @@ backend:
   name: git-gateway
   branch: master
 
-media_folder: 'src/assets/projects'
-public_folder: '/assets/projects'
+media_folder: 'src/assets/realizovane-zakazky'
+public_folder: '/assets/realizovane-zakazky'
 collections:
-  - name: 'projects'
+  - name: 'realizovane-zakazky'
     label: 'Projekty'
-    folder: 'src/projects'
+    folder: 'src/realizovane-zakazky'
     create: true
     fields:
       - { label: 'Název projektu', name: 'title', widget: 'string' }
