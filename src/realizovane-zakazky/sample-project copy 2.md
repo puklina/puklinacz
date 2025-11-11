@@ -1,5 +1,5 @@
 ---
-title: 'PRŮMYSLOVÝ OBJEKT'
+title: 'PrŮMYSLOVý OBJEKT'
 image: 'https://picsum.photos/id/61/2400/3600?grayscale'
 description: 'Instalace průmyslové střechy s světlíky a odvodněním.'
 start_date: 2025-08-01
