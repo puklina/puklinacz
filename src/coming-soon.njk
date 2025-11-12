@@ -1,0 +1,25 @@
+---
+layout: base.njk
+title: "Připravujeme nový web"
+---
+
+<main class="coming-soon" style="min-height:100vh;display:flex;align-items:center;justify-content:center;text-align:center;background-color:var(--color-bg);color:var(--color-text);padding:2rem;">
+
+  <div>
+    <h1 style="font-family:var(--font-heading);font-size:var(--fs-700);color:var(--color-primary);margin-bottom:1rem;">
+      Již brzy online
+    </h1>
+    <p style="font-size:var(--fs-base);color:var(--color-faded);margin-bottom:2rem;">
+      Na novém webu právě pracujeme. Zůstaňte naladěni.
+    </p>
+    <a href="mailto:jiri.gresak@puklina.com" class="button" style="background:var(--color-primary);color:var(--color-text);padding:0.75rem 1.5rem;text-decoration:none;transition:background var(--transition-medium);">
+      Napište nám
+    </a>
+    <script>
+      const btn = document.querySelector('.button');
+      btn.addEventListener('mouseover', () => btn.style.background = window.getComputedStyle(document.documentElement).getPropertyValue('--color-hover'));
+      btn.addEventListener('mouseout', () => btn.style.background = window.getComputedStyle(document.documentElement).getPropertyValue('--color-primary'));
+    </script>
+  </div>
+
+</main>

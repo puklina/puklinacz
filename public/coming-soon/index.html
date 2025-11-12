@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="cs">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+    <title>Připravujeme nový web</title>
+    <meta name="description" content="">
+    <meta property="og:locale" content="cs_CZ"/>
+    <meta property="og:site_name" content=""/>
+    <link rel="canonical" href="https://www.puklina.cz/coming-soon/"/>
+    <meta name="robots" content="index, follow"/>
+    <link rel="stylesheet" href="/css/styles.css"/>
+    <meta name="format-detection" content="telephone=no, date=no, address=no, email=no">
+    
+    <link rel="icon" type="image/png" href="/assets/logos/favicon-96x96.png" sizes="96x96"/>
+    <link rel="icon" type="image/svg+xml" href="/assets/logos/favicon.svg"/>
+    <link rel="shortcut icon" href="/assets/logos/favicon.ico"/>
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/logos/apple-touch-icon.png"/>
+    <meta name="apple-mobile-web-app-title" content="Puklina"/>
+    <link rel="manifest" href="/assets/logos/site.webmanifest"/>
+  </head>
+  <body>
+    
+<main class="coming-soon" style="min-height:100vh;display:flex;align-items:center;justify-content:center;text-align:center;background-color:var(--color-bg);color:var(--color-text);padding:2rem;">
+
+  <div>
+    <h1 style="font-family:var(--font-heading);font-size:var(--fs-700);color:var(--color-primary);margin-bottom:1rem;">
+      Již brzy online
+    </h1>
+    <p style="font-size:var(--fs-base);color:var(--color-faded);margin-bottom:2rem;">
+      Na novém webu právě pracujeme. Zůstaňte naladěni.
+    </p>
+    <a href="mailto:jiri.gresak@puklina.com" class="button" style="background:var(--color-primary);color:var(--color-text);padding:0.75rem 1.5rem;text-decoration:none;transition:background var(--transition-medium);">
+      Napište nám
+    </a>
+    <script>
+      const btn = document.querySelector('.button');
+      btn.addEventListener('mouseover', () => btn.style.background = window.getComputedStyle(document.documentElement).getPropertyValue('--color-hover'));
+      btn.addEventListener('mouseout', () => btn.style.background = window.getComputedStyle(document.documentElement).getPropertyValue('--color-primary'));
+    </script>
+  </div>
+
+</main>
+    <script>
+      if (window.netlifyIdentity) {
+        window
+          .netlifyIdentity
+          .on("init", (user) => {
+            if (!user) {
+              window
+                .netlifyIdentity
+                .on("login", () => {
+                  document.location.href = "/admin/";
+                });
+            }
+          });
+      }
+    </script>
+    <script src="/script.js"></script>
+  </body>
+</html>
