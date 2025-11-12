@@ -4,7 +4,11 @@
     <meta charset="UTF-8"/>
     <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-
+    <script>
+      if ((location.hostname === 'puklina.com' || location.hostname === 'www.puklina.com') && !location.pathname.startsWith('/coming-soon')) {
+        location.replace('/coming-soon/')
+      }
+    </script>
     <title>MODERNÍ NOVOSTAVBA</title>
     <meta name="description" content="Realizace zelené střechy s fotovoltaickými panely.">
     <meta property="og:locale" content="cs_CZ"/>
