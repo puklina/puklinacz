@@ -72,29 +72,19 @@ module.exports = function (eleventyConfig) {
 	// Convert file names to alt text
 	eleventyConfig.addFilter('filenameToAlt', function (path = '') {
 		if (!path) return '';
-
-		// Get last segment: "strecha-zvenku-libava.jpeg"
+		// Get last segment
 		const parts = path.split('/');
 		const file = parts[parts.length - 1];
-
 		// Remove extension
 		const name = file.replace(/\.[^/.]+$/, ''); // "strecha-zvenku-libava"
-
 		// Remove trailing numbers like "-01", "_2" if you want
 		const cleaned = name.replace(/[-_]\d+$/, ''); // "strecha-zvenku-libava"
-
 		// Replace dashes/underscores with spaces
 		let alt = cleaned.replace(/[-_]+/g, ' '); // "strecha zvenku libava"
-
 		// Sentence case: first letter upper, rest as-is
 		alt = alt.charAt(0).toUpperCase() + alt.slice(1);
-
 		return alt;
 	});
-
-	return {
-		// existing config
-	};
 
 	return {
 		dir: {
