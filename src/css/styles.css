@@ -290,8 +290,11 @@ code {
 	width: min(100% - 2 * var(--space), 70ch);
 	margin-inline: auto;
 }
+section {
+	padding-block: 6rem;
+}
 .section--hug {
-	padding-block: var(--space);
+	padding-block: 3rem;
 }
 .grid-2 {
 	display: grid;
@@ -499,6 +502,25 @@ section.logos {
 	.carousel-wrapper--few .carousel .card {
 		flex: 0 0 30%;
 		max-width: 30%;
+		overflow: visible;
+	}
+	.carousel-wrapper--few .carousel .card:only-child {
+		flex: 1 1 0;
+		max-width: 800px;
+	}
+	.carousel-wrapper--few .card:only-child a {
+		display: flex;
+	}
+	.carousel-wrapper--few .card:only-child img {
+		max-width: 45%;
+	}
+	.carousel-wrapper--few .card:only-child .card-body {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+	}
+	.carousel-wrapper--few .card:only-child h3 {
+		margin-top: 0;
 	}
 }
 
@@ -564,7 +586,7 @@ section.logos {
 /* ==== CONTACT FORM ==== */
 
 section.contact {
-	padding-bottom: 3rem;
+	background-color: #0b0b0b;
 }
 .contact-form {
 	display: flex;

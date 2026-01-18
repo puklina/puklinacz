@@ -17,8 +17,8 @@ is_home: true
   </section> #}
 
   {# --- PROJECTS --- #}
-  <section class="wrapper--wide section--hug projects" id="projekty">
-    <h2 class="text-center">Realizované <span class="clr-primary">zakázky</span></h2>
+  <section class="wrapper--wide projects" id="projekty">
+    <h2 class="text-center hug">Realizované <span class="clr-primary">zakázky</span></h2>
 
     <div class="carousel-wrapper{% if collections.projects.length <= 3 %} carousel-wrapper--few{% endif %}">
       {% if collections.projects.length > 3 %}
@@ -48,8 +48,10 @@ is_home: true
   </section>
 
   {# --- CONTACT --- #}
-  <section class="wrapper section--hug contact" id="kontakt">
-    {% include "contact.njk" %}
+  <section class="contact" id="kontakt">
+    <div class="wrapper">
+      {% include "contact.njk" %}
+    </div>
   </section>
 
 </main>
