@@ -7,7 +7,7 @@ async function imageShortcode(
 	src,
 	alt = '',
 	cls = '',
-	sizes = '(min-width: 600px) 100vw, 50vw'
+	sizes = '(min-width: 600px) 100vw, 50vw',
 ) {
 	let metadata = await Image(src, {
 		widths: [320, 640, 960, 1280, 1920],
@@ -57,7 +57,7 @@ module.exports = function (eleventyConfig) {
 		'excludeFromCollection',
 		(collection = [], pageUrl = this.ctx.page.url) => {
 			return collection.filter((post) => post.url !== pageUrl);
-		}
+		},
 	);
 
 	// register the image shortcode (Nunjucks, Liquid, JS)
@@ -66,8 +66,35 @@ module.exports = function (eleventyConfig) {
 	eleventyConfig.addJavaScriptFunction('image', imageShortcode);
 
 	eleventyConfig.addCollection('projects', (collection) =>
-		collection.getFilteredByGlob('src/realizovane-zakazky/*.md')
+		collection.getFilteredByGlob('src/realizovane-zakazky/*.md'),
 	);
+
+	// Convert file names to alt text
+	eleventyConfig.addFilter('filenameToAlt', function (path = '') {
+		if (!path) return '';
+
+		// Get last segment: "strecha-zvenku-libava.jpeg"
+		const parts = path.split('/');
+		const file = parts[parts.length - 1];
+
+		// Remove extension
+		const name = file.replace(/\.[^/.]+$/, ''); // "strecha-zvenku-libava"
+
+		// Remove trailing numbers like "-01", "_2" if you want
+		const cleaned = name.replace(/[-_]\d+$/, ''); // "strecha-zvenku-libava"
+
+		// Replace dashes/underscores with spaces
+		let alt = cleaned.replace(/[-_]+/g, ' '); // "strecha zvenku libava"
+
+		// Sentence case: first letter upper, rest as-is
+		alt = alt.charAt(0).toUpperCase() + alt.slice(1);
+
+		return alt;
+	});
+
+	return {
+		// existing config
+	};
 
 	return {
 		dir: {

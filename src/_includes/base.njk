@@ -9,11 +9,62 @@
         location.replace('/coming-soon/')
       }
     </script>
-    <title>{{ title or site.title }}</title>
-    <meta name="description" content="{{ description or site.description }}">
+    {# Meta helpers. #}
+    {% set siteName = site.name or site.title or "Puklina" %}
+    {% set metaTitle = title or siteName %}
+    {% set metaDescription = description or site.description %}
+    {% set canonicalUrl = site.url ~ (page.url | url) %}
+
+    {# Resolve OG image #}
+    {% if image %}
+      {% if image.startsWith('http') %}
+        {% set metaImage = image %}
+      {% else %}
+        {% set metaImage = site.url ~ image %}
+      {% endif %}
+    {% else %}
+      {% set metaImage = site.url ~ "/assets/img/puklina-og-default.jpg" %}
+    {% endif %}
+
+    {% set metaImageAlt = imageAlt or metaTitle %}
+
+    <title>{{ metaTitle }}</title>
+    <meta name="description" content="{{ metaDescription }}">
+    <link rel="canonical" href="{{ canonicalUrl }}"/>
+
     <meta property="og:locale" content="cs_CZ"/>
-    <meta property="og:site_name" content="{{ site.title }}"/>
-    <link rel="canonical" href="{{ site.url }}{{ page.url | url }}"/>
+    <meta property="og:site_name" content="{{ siteName }}"/>
+    <meta property="og:title" content="{{ metaTitle }}"/>
+    <meta property="og:description" content="{{ metaDescription }}"/>
+    <meta property="og:url" content="{{ canonicalUrl }}"/>
+    <meta property="og:type" content="website"/>
+    {% if metaImage %}
+      <meta property="og:image" content="{{ metaImage }}"/>
+      <meta property="og:image:alt" content="{{ metaImageAlt }}"/>
+    {% endif %}
+
+    <meta name="twitter:card" content="summary_large_image"/>
+    <meta name="twitter:title" content="{{ metaTitle }}"/>
+    <meta name="twitter:description" content="{{ metaDescription }}"/>
+    {% if metaImage %}<meta name="twitter:image" content="{{ metaImage }}"/>{% endif %}
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "name": "{{ siteName }}",
+        "url": "{{ site.url }}"
+      }
+    </script>
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "{{ siteName }}",
+        "url": "{{ site.url }}",
+        "logo": "{{ site.logo or (site.url ~ '/assets/logos/favicon-96x96.png') }}"
+      }
+    </script>
     <meta name="robots" content="index, follow"/>
     <link rel="stylesheet" href="/css/styles.css"/>
     <meta name="format-detection" content="telephone=no, date=no, address=no, email=no">

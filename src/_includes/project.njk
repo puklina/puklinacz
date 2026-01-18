@@ -39,15 +39,18 @@ layout: base.njk
     <div class="gallery wrapper--wide">
       {% for img in gallery %}
         <div class="gallery__item" data-full="{{ img }}">
-          <img class="mx-auto" src="{{ img }}" alt="{{ title }}">
+          <img
+          class="mx-auto"
+          src="{{ img }}"
+          alt="{{ img | filenameToAlt }}"
+        >
         </div>
       {% endfor %}
     </div>
   {% endif %}
-
   <div class="wrapper--narrow text-center mt-6">
     <p>
-      <a href="/#kontakt" class="button">Kontaktujte nás</a>
+      <a href="/#kontakt" class="button">Nezávazně poptat</a>
     </p>
     <p class="small-print mt-4">
       <a href="/" class="btn btn--primary link-unstyled faded">← Nebo zpět na hlavní stránku</a>

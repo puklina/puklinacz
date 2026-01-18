@@ -643,6 +643,7 @@ section.contact {
 .header__button {
 	border-radius: 50em;
 	font-size: 16px;
+	color: var(--color-text);
 }
 .header__button:hover {
 	transform: none;

@@ -1,2 +1,4 @@
 
-User-agent: * Allow: / Sitemap: https://www.puklina.cz/sitemap.xml
+User-agent: * 
+Allow: / 
+Sitemap: https://www.puklina.cz/sitemap.xml
