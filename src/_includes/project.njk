@@ -5,7 +5,7 @@ layout: base.njk
 
 <article class="project">
   <div class="project-overview">
-    <div class="project-overview__bg" style="background-image: url('{{ image }}');"></div>
+    <div class="project-overview__bg" style="background-image: url('{{ image | netlifyBg(1600, 75) }}');"></div>
     <div class="project-overview__content wrapper--wide">
       <div class="project-title">
         {% set words = title.split(' ') %}
@@ -41,8 +41,10 @@ layout: base.njk
         <div class="gallery__item" data-full="{{ img }}">
           <img
           class="mx-auto"
-          src="{{ img }}"
+          src="{{ img | netlifyImg(480, 75) }}"
           alt="{{ img | filenameToAlt }}"
+          loading="lazy"
+          decoding="async"
         >
         </div>
       {% endfor %}

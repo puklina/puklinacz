@@ -85,6 +85,34 @@ module.exports = function (eleventyConfig) {
 		alt = alt.charAt(0).toUpperCase() + alt.slice(1);
 		return alt;
 	});
+	// image optimization filter
+	eleventyConfig.addFilter(
+		'netlifyImg',
+		function (src, width = 800, quality = 75) {
+			if (!src) return src;
+			// Assumes `src` is a relative path on your site
+			const params = new URLSearchParams({
+				url: src,
+				w: width.toString(),
+				q: quality.toString(),
+			});
+			return `/.netlify/images?${params.toString()}`;
+		},
+	);
+	// Build optimized hero background URLs via Netlify Image CDN [web:56][web:57]
+	eleventyConfig.addFilter(
+		'netlifyBg',
+		function (src, width = 1600, quality = 75) {
+			if (!src) return src;
+			const params = new URLSearchParams({
+				url: src,
+				w: width.toString(),
+				q: quality.toString(),
+				fit: 'cover',
+			});
+			return `/.netlify/images?${params.toString()}`;
+		},
+	);
 
 	return {
 		dir: {
