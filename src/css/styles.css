@@ -313,7 +313,8 @@ code {
 
 a {
 	color: var(--color-primary);
-	transition: color var(--transition-fast),
+	transition:
+		color var(--transition-fast),
 		background-color var(--transition-fast);
 }
 a:hover {
@@ -327,7 +328,9 @@ button,
 	padding: 0.75rem 1.5rem;
 	border-radius: 4px;
 	text-decoration: none;
-	transition: background var(--transition-fast), color var(--transition-fast),
+	transition:
+		background var(--transition-fast),
+		color var(--transition-fast),
 		transform var(--transition-fast);
 	text-transform: uppercase;
 	font-weight: 700;
@@ -487,6 +490,17 @@ section.logos {
 		max-width: 25%;
 		box-sizing: border-box;
 	}
+
+	/* 1–3 cards: centered row */
+	.carousel-wrapper--few .carousel {
+		justify-content: center; /* centers the group of cards [web:38][web:41] */
+	}
+	.carousel-wrapper--few .carousel .card {
+		flex: 0 0 30%;
+		max-width: 30%;
+	}
+
+	/* 4+ cards: keep your existing 25% / flex-start layout */
 }
 
 .card {
@@ -717,7 +731,9 @@ section.contact {
 	object-fit: cover;
 	border: 2px solid rgba(255, 255, 255, 0.05);
 	border-radius: 6px;
-	transition: transform 0.35s ease, border-color 0.3s ease;
+	transition:
+		transform 0.35s ease,
+		border-color 0.3s ease;
 }
 
 .gallery__item:hover img {
