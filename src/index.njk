@@ -20,16 +20,20 @@ is_home: true
   <section class="wrapper--wide section--hug projects" id="projekty">
     <h2 class="text-center">Realizované <span class="clr-primary">zakázky</span></h2>
     <div class="carousel-wrapper">
-      <button class="arrow left" aria-label="Předchozí">&#10094;</button>
+      {% if collections.projects.length > 1 %}
+        <button class="arrow left" aria-label="Předchozí">&#10094;</button>
+      {% endif %}
       <div class="carousel">
         {% for project in collections.projects %}
           {% include "card.njk" %}
         {% endfor %}
       </div>
-      <button class="arrow right" aria-label="Další">&#10095;</button>
+      {% if collections.projects.length > 1 %}
+        <button class="arrow right" aria-label="Další">&#10095;</button>
+      {% endif %}
     </div>
     <div class="text-center">
-      <a href="https://instagram.com/puklina" target="_blank" class="button button-flex">
+      <a href="https://www.instagram.com/puklina_sro/" target="_blank" class="button button-flex">
         <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" stroke="#ffffff" stroke-width="1.488">
           <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
           <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
