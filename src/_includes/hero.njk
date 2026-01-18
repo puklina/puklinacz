@@ -1,7 +1,18 @@
 <section class="hero">
-  <video autoplay muted loop playsinline class="hero-bg">
-    <source src="/assets/img/video-bg.mp4" type="video/mp4"/>
-  </video>
+  <video
+  class="hero-bg"
+  autoplay
+  muted
+  playsinline
+  loop
+  preload="none"
+  data-video-lazy="true"
+>
+    <source data-src="/assets/video/libava-bg-hero-bw.webm" type="video/webm"/>
+    <source data-src="/assets/video/libava-bg-hero-bw.mp4" type="video/mp4"/>
+  Your browser does not support the video tag.
+</video>
+
   <div class="wrapper section--hug">
     <div class="hero-content">
       <h1 class="fade-in">
