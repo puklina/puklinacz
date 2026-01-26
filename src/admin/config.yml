@@ -1,6 +1,10 @@
 backend:
-  name: git-gateway
+  name: github
+  repo: puklina/puklinacz
   branch: master
+
+site_url: https://puklina.com
+display_url: https://puklina.com
 
 media_folder: 'src/assets/realizovane-zakazky'
 public_folder: '/assets/realizovane-zakazky'
