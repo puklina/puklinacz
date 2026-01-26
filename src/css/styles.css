@@ -698,7 +698,7 @@ section.contact {
 @media (prefers-reduced-motion: reduce) {
 	.project-overview__bg {
 		transform: none !important;
-		position: fixed; /* optional fallback: keep it subtle but static */
+		pointer-events: none;
 	}
 }
 
