@@ -2,6 +2,7 @@ backend:
   name: github
   repo: puklina/puklinacz
   branch: master
+  site_domain: puklina.netlify.app
 
 site_url: https://puklina.com
 display_url: https://puklina.com
