@@ -69,14 +69,16 @@
 <header class="header wrapper--wide header--absolute">
   <div class="header__inner">
     <div class="logo">
-      <img
-        src="/assets/logos/cely_logotyp_barevny_bila.png"
-        alt="Puklina logo"
-        width="400"
-        height="auto"
+      <a href="/">
+        <img
+          src="/assets/logos/cely_logotyp_barevny_bila.png"
+          alt="Puklina logo"
+          width="400"
+          height="auto"
 />
+      </a>
     </div>
-    <a href="#kontakt" class="button button-outline header__button">Kontaktujte nás</a>
+    <a href="/#kontakt" class="button button-outline header__button">Kontaktujte nás</a>
   </div>
 </header>
 
@@ -210,6 +212,7 @@
     </div>
     <form name="contact" method="POST" data-netlify="true" class="contact-form">
       <input type="hidden" name="form-name" value="contact">
+      <input type="hidden" name="redirect" value="/dekujeme-za-zpravu/">
 
       <label class="visually-hidden" for="jmeno">Jméno</label>
       <input id="jmeno" name="jmeno" type="text" placeholder="Jméno" required>
