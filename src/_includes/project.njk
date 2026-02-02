@@ -38,7 +38,10 @@ layout: base.njk
   {% if gallery %}
     <div class="gallery wrapper--wide">
       {% for img in gallery %}
-        <div class="gallery__item" data-full="{{ img }}">
+        {# Decap stores e.g. "assets/realizovane-zakazky/img_4249.jpeg" #}
+        {% set full = '/' + img %}
+
+        <div class="gallery__item" data-full="{{ full }}">
           <img
           class="mx-auto"
           src="{{ img | netlifyImg(480, 75) }}"
@@ -50,6 +53,7 @@ layout: base.njk
       {% endfor %}
     </div>
   {% endif %}
+
   <div class="wrapper--narrow text-center mt-6">
     <p>
       <a href="/#kontakt" class="button">Nezávazně poptat</a>
