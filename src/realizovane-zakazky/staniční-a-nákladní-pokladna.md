@@ -1,7 +1,7 @@
 ---
 title: Staniční a nákladní pokladna
 description: Oprava střechy a štítové stěny
-image: /assets/realizovane-zakazky/img_4252.heic
+image: /assets/realizovane-zakazky/img_3305.jpeg
 start_date: 2024-11-01
 end_date: 2025-03-27
 ---
