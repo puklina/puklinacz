@@ -12,7 +12,8 @@ eleventyExcludeFromCollections: true
   <body>
     <!-- Include the script that builds the page and powers Netlify CMS -->
     <script src="https://unpkg.com/decap-cms@^3/dist/decap-cms.js"></script>
-    <!-- Loads the CSS in Decap CMS -->
+    <!-- Custom preview panel -->
+    <script src="/admin/preview.js"></script>
     <script>
       CMS.registerPreviewStyle("/css/styles.css");
     </script>

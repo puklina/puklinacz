@@ -9,7 +9,7 @@ site_url: https://puklina.com
 display_url: https://puklina.com
 
 media_folder: 'src/assets/realizovane-zakazky'
-public_folder: '/assets/realizovane-zakazky'
+public_folder: 'assets/realizovane-zakazky'
 collections:
   - name: 'realizovane-zakazky'
     label: 'Projekty'
