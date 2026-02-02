@@ -1,5 +1,4 @@
 // src/admin/preview.js
-// Decap provides createClass and h globally.
 
 const ProjectPreview = createClass({
 	render: function () {
@@ -13,15 +12,6 @@ const ProjectPreview = createClass({
 		const endDate = data.get('end_date');
 		const body = this.props.widgetFor('body');
 
-		// Gallery can be Immutable.List or plain array
-		const rawGallery = data.get('gallery');
-		const gallery = rawGallery
-			? rawGallery.toArray
-				? rawGallery.toArray()
-				: rawGallery
-			: [];
-
-		// Split title like in Nunjucks template
 		const words = title.trim().split(' ');
 		const lastWord = words.length > 1 ? words[words.length - 1] : title;
 		const firstWords = words.length > 1 ? words.slice(0, -1).join(' ') : '';
@@ -34,20 +24,14 @@ const ProjectPreview = createClass({
 			h(
 				'div',
 				{ className: 'project-overview' },
-
-				// Background image
 				h('div', {
 					className: 'project-overview__bg',
 					'aria-hidden': 'true',
 					style: image ? { backgroundImage: `url(${image})` } : {},
 				}),
-
-				// Title + description + dates
 				h(
 					'div',
 					{ className: 'project-overview__content wrapper--wide' },
-
-					// Title block
 					h(
 						'div',
 						{ className: 'project-title' },
@@ -58,15 +42,11 @@ const ProjectPreview = createClass({
 							h('span', { className: 'clr-primary' }, lastWord),
 						),
 					),
-
-					// Description + Realizace dates
 					h(
 						'div',
 						{ className: 'project-description' },
-
 						description &&
 							h('p', { className: 'lead' }, h('strong', {}, description)),
-
 						startDate &&
 							endDate &&
 							h(
@@ -78,41 +58,28 @@ const ProjectPreview = createClass({
 				),
 			),
 
-			// MAIN CONTENT
+			// MAIN CONTENT (body)
 			h(
 				'div',
 				{ className: 'wrapper--narrow' },
 				h('div', { className: 'project-content' }, body),
 			),
 
-			// GALLERY SECTION (simple img tags, no Eleventy shortcodes)
-			gallery.length > 0 &&
+			// GALLERY PLACEHOLDER
+			h(
+				'div',
+				{
+					className: 'gallery wrapper--wide mt-6',
+					style: { textAlign: 'center', opacity: 0.7 },
+				},
 				h(
-					'div',
-					{ className: 'gallery wrapper--wide' },
-					gallery.map((item, index) => {
-						// list field with `field: { name: image }` -> each item is { image: "path" }
-						const imgSrc = item.image || item;
-
-						return h(
-							'div',
-							{
-								key: index,
-								className: 'gallery__item',
-								'data-full': imgSrc,
-							},
-							h('img', {
-								className: 'mx-auto',
-								src: imgSrc,
-								alt: '',
-								loading: 'lazy',
-								decoding: 'async',
-							}),
-						);
-					}),
+					'p',
+					{ style: { fontStyle: 'italic' } },
+					'[Galerie se v náhledu nezobrazuje. Po publikování se zobrazí zde.]',
 				),
+			),
 
-			// BOTTOM CTA SECTION (button + back link)
+			// CTA section
 			h(
 				'div',
 				{ className: 'wrapper--narrow text-center mt-6' },
@@ -142,5 +109,4 @@ const ProjectPreview = createClass({
 	},
 });
 
-// IMPORTANT: use the collection "name" from config.yml
 CMS.registerPreviewTemplate('realizovane-zakazky', ProjectPreview);
