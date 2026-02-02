@@ -10,4 +10,5 @@ gallery:
   - assets/realizovane-zakazky/img_4377.jpeg
   - assets/realizovane-zakazky/img_4253.jpeg
 ---
+
 Kompletní výměna bednění o rozloze 540 m2 z falcovaného plechu. Byla provedena kontrola konstrukce krovu, doplnění a výměna jeho částí. Cely objekt byl staticky zajištěn stažením lany a sešitím trhlin dle požadavku ve statickém posudku. Byl proveden nový hromosvod, včetně revize.
