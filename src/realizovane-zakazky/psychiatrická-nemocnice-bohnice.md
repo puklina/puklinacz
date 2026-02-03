@@ -1,6 +1,6 @@
 ---
 title: psychiatrická nemocnice bohnice
-description: Havarijní oprava fasádního pláště a střešní krytiny plechové haly TESKO
+description: Havarijní oprava fasádního pláště a střešní krytiny plechové haly TESKO.
 image: assets/realizovane-zakazky/img_8853-1-.jpeg
 start_date: 2025-07-01
 end_date: 2025-08-28
