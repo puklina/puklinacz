@@ -491,7 +491,7 @@ section.logos {
 		display: none;
 	}
 	.carousel .card {
-		flex: 0 0 25%;
+		flex: calc((100% - 3 * clamp(1rem, 2vw, 2rem)) / 4);
 		max-width: 25%;
 		box-sizing: border-box;
 	}
