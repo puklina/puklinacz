@@ -1,5 +1,5 @@
 ---
-title: Bytový dům na adrese Gorazdovo náměstí 65 v Olomouci
+title: Bytový dům Gorazdovo náměstí 65 v Olomouci
 description: Výměna střešní krytiny, očištění fasády
 image: assets/realizovane-zakazky/dji_0256.jpeg
 start_date: 2024-09-02
