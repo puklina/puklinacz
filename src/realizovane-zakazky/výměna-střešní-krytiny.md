@@ -1,6 +1,6 @@
 ---
-title: Výměna střešní krytiny
-description: na budově Gorazdovo náměstí č.p. 65 v Olomouci
+title: Bytový dům na adrese Gorazdovo náměstí 65 v Olomouci
+description: Výměna střešní krytiny, očištění fasády
 image: assets/realizovane-zakazky/dji_0256.jpeg
 start_date: 2024-09-02
 end_date: 2024-11-29
