@@ -1,5 +1,5 @@
 ---
-title: "STARÁ VODA,  KOSTEL SV. ANNY A SV. JAKUBA VĚTŠÍHO "
+title: KOSTEL SV. ANNY A SV. JAKUBA VĚTŠÍHO, STARÁ VODA u obce Libavá
 description: Montáž záchytné sítě v hlavní lodi
 image: assets/realizovane-zakazky/img_8014.jpeg
 start_date: 2025-07-05
