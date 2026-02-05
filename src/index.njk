@@ -22,7 +22,7 @@ is_home: true
   <section class="wrapper--wide projects" id="projekty">
     <h2 class="text-center hug">Realizované <span class="clr-primary">zakázky</span></h2>
 
-    <div class="carousel-wrapper{% if collections.projects.length <= 3 %} carousel-wrapper--few{% endif %}">
+    <div class="carousel-wrapper{% if collections.projects.length > 4 %} carousel-wrapper--full{% elseif collections.projects.length <= 3 %} carousel-wrapper--few{% endif %}">
       {% if collections.projects.length > 3 %}
         <button class="arrow left" aria-label="Předchozí">&#10094;</button>
       {% endif %}

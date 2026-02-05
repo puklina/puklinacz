@@ -495,7 +495,9 @@ section.logos {
 		max-width: 25%;
 		box-sizing: border-box;
 	}
-
+	.carousel-wrapper--full .carousel .card {
+		flex: 21% 0 0;
+	}
 	/* 1–3 cards: centered row */
 	.carousel-wrapper--few .carousel {
 		justify-content: center; /* centers the group of cards [web:38][web:41] */
