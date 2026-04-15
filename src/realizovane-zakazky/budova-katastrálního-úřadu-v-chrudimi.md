@@ -13,7 +13,6 @@ gallery:
   - assets/realizovane-zakazky/dji_fly_20251204_133446_0371_1764867892857_photo-1-.jpeg
   - assets/realizovane-zakazky/dsc00363.jpeg
   - assets/realizovane-zakazky/dsc00404.jpeg
-  - assets/realizovane-zakazky/dsc00366.jpeg
   - assets/realizovane-zakazky/dsc00389.jpeg
   - assets/realizovane-zakazky/dsc00383.jpeg
 ---
