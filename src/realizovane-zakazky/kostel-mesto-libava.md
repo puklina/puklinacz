@@ -4,6 +4,7 @@ description: Oprava střechy věže kostela
 image: /assets/realizovane-zakazky/mesto-libava-pohled.jpeg
 start_date: 2025-03-01
 end_date: 2025-12-01
+order: 1
 gallery:
   - assets/realizovane-zakazky/mesto-libava-pohled.jpeg
   - assets/realizovane-zakazky/strecha-zvenku-libava.jpeg
