@@ -4,7 +4,7 @@ description: Oprava střechy a štítové stěny
 image: assets/realizovane-zakazky/img_4377.jpeg
 start_date: 2024-11-01
 end_date: 2025-03-27
-order: 4
+order: 3
 gallery:
   - assets/realizovane-zakazky/img_4265.jpeg
   - assets/realizovane-zakazky/img_4249.jpeg
