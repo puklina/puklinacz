@@ -4,7 +4,7 @@ description: Kompletní rekonstrukce ploché dvouplášťové střechy.
 image: assets/realizovane-zakazky/dji_20261029110359_0088_d.jpg
 start_date: 2026-07-02
 end_date: 2026-10-29
-order: 12
+order: 1
 gallery:
   - assets/realizovane-zakazky/dji_20260706113532_0014_d.jpeg
   - assets/realizovane-zakazky/dji_20261029110359_0088_d.jpg
