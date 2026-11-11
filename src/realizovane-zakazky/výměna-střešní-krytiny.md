@@ -4,7 +4,7 @@ description: Výměna střešní krytiny, očištění fasády
 image: assets/realizovane-zakazky/dji_0256.jpeg
 start_date: 2024-09-02
 end_date: 2024-11-29
-order: 6
+order: 9
 gallery:
   - assets/realizovane-zakazky/dji_0256.jpeg
   - assets/realizovane-zakazky/dji_0860.jpeg
