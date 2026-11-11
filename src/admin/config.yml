@@ -37,13 +37,6 @@ collections:
           time_format: false,
         }
       - {
-          label: 'Pořadí (volitelné)',
-          name: 'order',
-          widget: 'number',
-          required: false,
-          hint: 'Menší číslo = vyšší pozice',
-        }
-      - {
           label: 'Obsah stránky',
           name: 'body',
           widget: 'markdown',
