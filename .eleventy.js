@@ -66,8 +66,13 @@ module.exports = function (eleventyConfig) {
 	eleventyConfig.addJavaScriptFunction('image', imageShortcode);
 
 	eleventyConfig.addCollection('projects', (collection) =>
-		collection.getFilteredByGlob('src/realizovane-zakazky/*.md'),
-	);
+  collection
+    .getFilteredByGlob('src/realizovane-zakazky/*.md')
+    .sort((a, b) =>
+      (a.data.order ?? 999) - (b.data.order ?? 999) ||
+      a.data.title.localeCompare(b.data.title, 'cs')
+    ),
+);
 
 	// Convert file names to alt text
 	eleventyConfig.addFilter('filenameToAlt', function (path = '') {
